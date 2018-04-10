@@ -20,4 +20,5 @@ class AnswersTableSeeder extends Seeder
             $answer->save();
         });
     }
+
 }
