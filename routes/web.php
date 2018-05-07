@@ -47,4 +47,4 @@ Route::group(['middleware' => 'App\Http\Middleware\SuperAdminMiddleware'], funct
 {
     Route::match(['get', 'post'], '/superAdminOnlyPage/','HomeController@super_admin');
 
-});  
+});
