@@ -19,7 +19,7 @@ class MemberMiddlewareTestMiddlewareTest extends TestCase
 
     public function Members_are_redirected()
     {
-        $user = factory(User::class)->make(['is_admin' => false]);
+        $user = factory(User::class)->make(['is_member' => false]);
 
         $this->actingAs($user);
 
@@ -37,7 +37,7 @@ class MemberMiddlewareTestMiddlewareTest extends TestCase
     /** @test */
     public function members_are_not_redirected()
     {
-        $user = factory(User::class)->make(['is_admin' => true]);
+        $user = factory(User::class)->make(['is_member' => true]);
 
         $this->actingAs($user);
 

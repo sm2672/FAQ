@@ -18,7 +18,7 @@ class SuperAdminMiddlewareTest extends TestCase
 
     public function non_super_admins_are_redirected()
     {
-        $user = factory(User::class)->make(['is_admin' => false]);
+        $user = factory(User::class)->make(['is_super_admin' => false]);
 
         $this->actingAs($user);
 
@@ -36,7 +36,7 @@ class SuperAdminMiddlewareTest extends TestCase
     /** @test */
     public function super_admins_are_not_redirected()
     {
-        $user = factory(User::class)->make(['is_admin' => true]);
+        $user = factory(User::class)->make(['is_super_admin' => true]);
 
         $this->actingAs($user);
 
